@@ -4,6 +4,7 @@ import { Home } from "./Home/Home";
 import { Blank } from "./Blank";
 import { LandingPage } from "./LandingPage";
 import { Offers } from "./Offers/Offers";
+import { Help } from "./Help/Help";
 
 
 export const Routers = () => {
@@ -14,6 +15,7 @@ export const Routers = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/blank" element={<Blank/>} />
         <Route path="/offers" element={<Offers/>} />
+        <Route path="/help" element={<Help/>} />
       </Routes>
     </div>
   );
