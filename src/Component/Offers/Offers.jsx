@@ -5,9 +5,9 @@ import { Main } from "../Home/Slider";
 import styled from "styled-components";
 
 const Hr = styled.hr`
-width: 140vh;
-margin-left: auto;
-margin-right: auto;
+  width: 140vh;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Wraper1 = styled.div`
@@ -30,9 +30,7 @@ flex-direction: row;
     color: black;
 }
 //   .right-div {
-    //     // border: 2px solid black;
     //     width: 113vh;
-    //     // background-color: bisque;
     //     padding: 1% 0%;
     //     display: flex;
     //     flex-direction: row;
@@ -41,9 +39,41 @@ flex-direction: row;
     // }
 }
 `;
+const Mains = styled(Main)`
+  background-color: #005062;
+`;
 const Container = styled.div`
-s
+  // background-color: red;
+  // border: 2px solid black;
+  width: 130vh;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
 
+  div {
+    width: 50%;
+    // border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    img {
+      height: 20vh;
+      width: 38vh;
+      margin-left: 26vh;
+    }
+  }
+  .para1 {
+    font-size: 5vh;
+    font-weight: 600;
+  }
+  .para2 {
+    font-size: 2vh;
+    font-weight: 500;
+    color: white;
+  }
 `;
 
 const Box = styled.div`
@@ -61,12 +91,22 @@ export const Offers = () => {
   return (
     <>
       <Navigationbar />
-      <Main>
-        <>
-          <h1>Offers for You</h1>
-          <h3>Explore top deals and offers exclusively for you!</h3>
-        </>
-      </Main>
+      <Mains>
+        <Container>
+          <div>
+            <p className="para1"> Offers for you</p>
+            <p className="para2">
+              Explore top deals and offers exclusively for you!
+            </p>
+          </div>
+          <div>
+            <img
+              src="	https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/KHu24Gqw_md3ham"
+              alt=""
+            />
+          </div>
+        </Container>
+      </Mains>
       <Wraper1>
         <span className="left-div">
           <Box>
