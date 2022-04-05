@@ -57,16 +57,16 @@ const Box = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: 10%;
-  color:grey;
+  color: grey;
   .Link1 {
     font-weight: 1000;
   }
-  
+
   .Link2 {
-    color:grey;
+    color: grey;
     text-decoration: none;
     // font-weight: 0;
-    width:26vh;
+    width: 26vh;
   }
   &:hover .Link1,
   &:hover {
@@ -144,7 +144,7 @@ export const Navigationbar = () => {
             />
             Offers
           </StyledLink>
-          <StyledLink to="/blank">
+          <StyledLink to="/help">
             <SupportIcon />
             Help
           </StyledLink>
