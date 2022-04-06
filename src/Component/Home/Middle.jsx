@@ -11,6 +11,7 @@ const Hr = styled.hr`
 
 const Wraper1 = styled.div`
   // border: 2px solid black;
+  
   height: 80px;
   width: 140vh;
   margin-top: 1%;
