@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   width: 140vh;
   margin-left: auto;
   margin-right: auto;
-  background-color: green;
+//   background-color: green;
   display: flex;
   flex-direction: row;
 `;
@@ -16,7 +16,7 @@ export const Bottmsection = () => {
   return (
     <Wrapper>
       <Loginsection />
-      <Cartsection />
+      {/* <Cartsection /> */}
     </Wrapper>
   );
 };
