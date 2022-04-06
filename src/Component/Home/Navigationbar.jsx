@@ -75,6 +75,7 @@ const Box = styled.div`
   }
 `;
 const StyledLink = styled(Link)`
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   margin-left: 10%;
