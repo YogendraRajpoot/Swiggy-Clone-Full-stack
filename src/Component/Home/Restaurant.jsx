@@ -147,7 +147,7 @@ const Div5 = styled.div`
 export const Restaurant = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/posts")
+    fetch("http://localhost:3000/restaurants")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
