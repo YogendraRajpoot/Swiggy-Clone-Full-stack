@@ -153,7 +153,7 @@ export const Navigationbar = () => {
             <PersonOutlineSharpIcon />
             Sign In
           </StyledLink>
-          <StyledLink to="/blank">
+          <StyledLink to="/cartpage">
             <SmallBox>2</SmallBox>
             Cart
           </StyledLink>
