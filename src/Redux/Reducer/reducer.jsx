@@ -1,30 +1,13 @@
-// import { ADD_TODO, DESC_COUNT, INC_COUNT, RESET } from "./action";
+import { ADD_LOCATION } from "./action";
 
-// export const reducer = (store, action) => {
-//   switch (action.type) {
-//     case INC_COUNT:
-//       return {
-//         ...store,
-//         count: store.count + action.payload,
-//       };
-//     case DESC_COUNT:
-//       return {
-//         ...store,
-//         count: store.count - action.payload,
-//       };
-//     case RESET:
-//       return {
-//         ...store,
-//         count: 0,
-//       };
+export const reducer = (store , {type,payload}) => {
+  switch (type) {
+    case ADD_LOCATION:
+      return {
+        location: payload,
+      };
 
-//       case ADD_TODO:
-//         return{
-//           ...store,
-//           todo:[...store.todo ,action.payload]
-//         }
-
-//     default:
-//       return store;
-//   }
-// };
+    default:
+      return store;
+  }
+};
