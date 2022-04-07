@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import StarRateIcon from "@mui/icons-material/StarRate";
+import { Link } from "react-router-dom";
 
 const Wraper2 = styled.div`
   //   border: 2px solid black;
@@ -11,7 +12,9 @@ const Wraper2 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
-const Card = styled.div`
+const Card = styled(Link)`
+text-decoration:none;
+color:black;
   //   border: 2px solid black;
   height: 40vh;
   margin-top: 10%;
@@ -158,7 +161,7 @@ export const Restaurant = () => {
     <Wraper2>
       {data.map((item) => {
         return (
-          <Card key={item.id}>
+          <Card key={item.id} to={`/home/${item.id}`}>
             <SmallCard>
               <SmallerCard1>
                 <Image src={item.img_url} alt="" />
@@ -168,7 +171,7 @@ export const Restaurant = () => {
                   <h3 className="h3">{item.name}</h3>
                 </Div1>
                 <Div2>
-                  <p>{item.cuisines.map((C)=>C)}</p>
+                  <p>{item.cuisines.map((C) => C)}</p>
                 </Div2>
                 <Div3>
                   <div className="para3 div1">
