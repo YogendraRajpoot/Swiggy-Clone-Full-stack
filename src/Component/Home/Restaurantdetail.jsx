@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Location.css";
 import { Navigationbar } from "./Navigationbar";
 export const Restaurantdetail = () => {
@@ -97,39 +97,39 @@ export const Restaurantdetail = () => {
           <div>
             <div className="everage">
               <div className="beverage">
-                <a href="#" className="tag">
+                <Link to="#" className="tag">
                   <div>Recommended</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Beverages</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Idlis & Vadas</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Upma & Pongal</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Bhajjis & Pakoras</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Dosas</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Uttapams</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Pesarattus</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Main Course</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>Thali</div>
-                </a>
-                <a href="#" className="tag">
+                </Link>
+                <Link to="#" className="tag">
                   <div>South Indian</div>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="_1Lx"></div>
