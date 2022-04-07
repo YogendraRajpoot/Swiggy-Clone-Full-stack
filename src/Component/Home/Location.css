@@ -118,7 +118,7 @@
 .section2 {
   width: 600px;
   flex-grow: 1;
-  padding: 0px 50px 100px;
+  /* padding: 0px 50px 100px; */
 
   text-align: left;
 }
@@ -134,9 +134,10 @@
 
 } */
 .beverage {
-  padding-top: 30px;
+  /* position: fixed; */
   text-align: right;
-  padding-bottom: 30px;
+  /* left: 440px; */
+  padding-right: 30px;
 }
 .tag {
   text-decoration: none;
@@ -158,7 +159,7 @@
 }
 
 .sec21 {
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
   border-left: 1px solid grey;
   padding-left: 20px;
 }
@@ -173,7 +174,9 @@
   /* margin-top: -30px; */
 }
 .items {
-  padding: 0px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: 2px solid black;
 }
 .items2 {
   padding-bottom: 14px;
@@ -257,7 +260,7 @@
   display: flex;
   flex-direction: row;
   width: 11vh;
-  border: 1px solid green;
+  border: 2px solid green;
   
 }
 

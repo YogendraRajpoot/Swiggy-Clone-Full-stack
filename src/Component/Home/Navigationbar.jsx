@@ -149,7 +149,7 @@ export const Navigationbar = () => {
             <SupportIcon />
             Help
           </StyledLink>
-          <StyledLink to="/blank">
+          <StyledLink to="/login">
             <PersonOutlineSharpIcon />
             Sign In
           </StyledLink>
