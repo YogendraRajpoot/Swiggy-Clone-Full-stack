@@ -6,6 +6,7 @@ import { LandingPage } from "./LandingPage";
 import { Offers } from "./Offers/Offers";
 import { Help } from "./Help/Help";
 import { Cartpage } from "./Cartpage/Cartpage";
+import { Restaurantdetail } from "./Home/Restaurantdetail";
 
 
 export const Routers = () => {
@@ -18,6 +19,9 @@ export const Routers = () => {
         <Route path="/offers" element={<Offers/>} />
         <Route path="/help" element={<Help/>} />
         <Route path="/cartpage" element={<Cartpage/>} />
+        <Route path="/home/:username" element={<Restaurantdetail/>} />
+      
+        Restaurantdetail
       </Routes>
     </div>
   );
