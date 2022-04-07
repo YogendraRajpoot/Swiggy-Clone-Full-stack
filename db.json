@@ -6,13 +6,23 @@
       "rating": 4.3,
       "average_cost": 150,
       "average_time": 28,
-      "cuisines": ["Home-Food ", "South-Indian ", "North-Indian "],
+      "cuisines": [
+        "Home-Food ",
+        "South-Indian ",
+        "North-Indian "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oqeiv5ymgoktmvfzvyi9",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621303, 12.947904] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621303,
+          12.947904
+        ]
+      },
       "categories": [
         "Recommended",
         "North Indian",
@@ -199,14 +209,29 @@
       "rating": 4.1,
       "average_cost": 300,
       "average_time": 38,
-      "cuisines": ["Burgers ", "Pizzas ", "Snacks "],
+      "cuisines": [
+        "Burgers ",
+        "Pizzas ",
+        "Snacks "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nlr1ywbavthnfijomq1h",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621807, 12.947068] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621807,
+          12.947068
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -316,7 +341,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -505,14 +529,27 @@
       "rating": 3.9,
       "average_cost": 200,
       "average_time": 64,
-      "cuisines": ["Fast-Food"],
+      "cuisines": [
+        "Fast-Food"
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zsjqhq6hgoejb0voxnsx",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.61964, 12.947936] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.61964,
+          12.947936
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -622,7 +659,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -811,13 +847,23 @@
       "rating": 4.3,
       "average_cost": 150,
       "average_time": 28,
-      "cuisines": ["Home-Food ", "South-Indian ", "North-Indian "],
+      "cuisines": [
+        "Home-Food ",
+        "South-Indian ",
+        "North-Indian "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oqeiv5ymgoktmvfzvyi9",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621303, 12.947904] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621303,
+          12.947904
+        ]
+      },
       "categories": [
         "Recommended",
         "North Indian",
@@ -1004,14 +1050,29 @@
       "rating": 4.1,
       "average_cost": 300,
       "average_time": 38,
-      "cuisines": ["Burgers ", "Pizzas ", "Snacks "],
+      "cuisines": [
+        "Burgers ",
+        "Pizzas ",
+        "Snacks "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nlr1ywbavthnfijomq1h",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621807, 12.947068] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621807,
+          12.947068
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -1121,7 +1182,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -1310,14 +1370,27 @@
       "rating": 3.9,
       "average_cost": 200,
       "average_time": 64,
-      "cuisines": ["Fast-Food"],
+      "cuisines": [
+        "Fast-Food"
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zsjqhq6hgoejb0voxnsx",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.61964, 12.947936] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.61964,
+          12.947936
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -1427,7 +1500,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -1616,13 +1688,23 @@
       "rating": 4.3,
       "average_cost": 150,
       "average_time": 28,
-      "cuisines": ["Home-Food ", "South-Indian ", "North-Indian "],
+      "cuisines": [
+        "Home-Food ",
+        "South-Indian ",
+        "North-Indian "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oqeiv5ymgoktmvfzvyi9",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621303, 12.947904] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621303,
+          12.947904
+        ]
+      },
       "categories": [
         "Recommended",
         "North Indian",
@@ -1809,14 +1891,29 @@
       "rating": 4.1,
       "average_cost": 300,
       "average_time": 38,
-      "cuisines": ["Burgers ", "Pizzas ", "Snacks "],
+      "cuisines": [
+        "Burgers ",
+        "Pizzas ",
+        "Snacks "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nlr1ywbavthnfijomq1h",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621807, 12.947068] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621807,
+          12.947068
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -1926,7 +2023,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -2115,14 +2211,27 @@
       "rating": 3.9,
       "average_cost": 200,
       "average_time": 64,
-      "cuisines": ["Fast-Food"],
+      "cuisines": [
+        "Fast-Food"
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zsjqhq6hgoejb0voxnsx",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.61964, 12.947936] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.61964,
+          12.947936
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -2232,7 +2341,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -2421,13 +2529,23 @@
       "rating": 4.3,
       "average_cost": 150,
       "average_time": 28,
-      "cuisines": ["Home-Food ", "South-Indian ", "North-Indian "],
+      "cuisines": [
+        "Home-Food ",
+        "South-Indian ",
+        "North-Indian "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oqeiv5ymgoktmvfzvyi9",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621303, 12.947904] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621303,
+          12.947904
+        ]
+      },
       "categories": [
         "Recommended",
         "North Indian",
@@ -2614,14 +2732,29 @@
       "rating": 4.1,
       "average_cost": 300,
       "average_time": 38,
-      "cuisines": ["Burgers ", "Pizzas ", "Snacks "],
+      "cuisines": [
+        "Burgers ",
+        "Pizzas ",
+        "Snacks "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nlr1ywbavthnfijomq1h",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621807, 12.947068] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621807,
+          12.947068
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -2731,7 +2864,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -2920,14 +3052,27 @@
       "rating": 3.9,
       "average_cost": 200,
       "average_time": 64,
-      "cuisines": ["Fast-Food"],
+      "cuisines": [
+        "Fast-Food"
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zsjqhq6hgoejb0voxnsx",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.61964, 12.947936] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.61964,
+          12.947936
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -3037,7 +3182,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -3226,13 +3370,23 @@
       "rating": 4.3,
       "average_cost": 150,
       "average_time": 28,
-      "cuisines": ["Home-Food ", "South-Indian ", "North-Indian "],
+      "cuisines": [
+        "Home-Food ",
+        "South-Indian ",
+        "North-Indian "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oqeiv5ymgoktmvfzvyi9",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621303, 12.947904] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621303,
+          12.947904
+        ]
+      },
       "categories": [
         "Recommended",
         "North Indian",
@@ -3419,14 +3573,29 @@
       "rating": 4.1,
       "average_cost": 300,
       "average_time": 38,
-      "cuisines": ["Burgers ", "Pizzas ", "Snacks "],
+      "cuisines": [
+        "Burgers ",
+        "Pizzas ",
+        "Snacks "
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nlr1ywbavthnfijomq1h",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.621807, 12.947068] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.621807,
+          12.947068
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -3536,7 +3705,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -3725,14 +3893,27 @@
       "rating": 3.9,
       "average_cost": 200,
       "average_time": 64,
-      "cuisines": ["Fast-Food"],
+      "cuisines": [
+        "Fast-Food"
+      ],
       "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zsjqhq6hgoejb0voxnsx",
       "veg": "true",
       "top_pick": "true",
       "exclusive": "true",
       "newly_added": "true",
-      "geometry": { "type": "Point", "coordinates": [77.61964, 12.947936] },
-      "categories": ["Recommended", "Burgers", "Pizzas", "Sandwiches"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.61964,
+          12.947936
+        ]
+      },
+      "categories": [
+        "Recommended",
+        "Burgers",
+        "Pizzas",
+        "Sandwiches"
+      ],
       "items": [
         {
           "category": "Recommended",
@@ -3842,7 +4023,6 @@
           "veg": true,
           "best_seller": true
         },
-
         {
           "category": "Pizzas",
           "name": "Regular Cheese Onion Capsicum",
@@ -4026,7 +4206,21 @@
       ]
     }
   ],
-
+  "persondetail": [
+    
+    {
+      "username": "aasda",
+      "address": "a123",
+      "number": "1312312313",
+      "id": 2
+    },
+    {
+      "username": "masai-school",
+      "address": "Indai",
+      "number": "123456789",
+      "id": 3
+    }
+  ],
   "comments": [
     {
       "id": 1,
