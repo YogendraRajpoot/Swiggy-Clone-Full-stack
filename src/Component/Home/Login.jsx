@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { AuthContext } from "../AuthContext";
 import { Navigationbar } from "./Navigationbar";
-
 const StyledLink = styled(Link)`
   color: orange;
 `;
@@ -30,42 +30,69 @@ const Card = styled.div`
 `;
 
 export const Login = () => {
-  // const { login } = useContext(AuthContext);
-  const [data, setData] = useState([]);
+  const { login } = useContext(AuthContext);
+
   const [form, setForm] = useState({
-    number: "",
+    email: "",
     password: "",
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-  // this part is make for local storage check
-
-  // useEffect(() => {
-  //   if (localStorage.getItem("Token") !== null) {
-  //     console.log(localStorage.getItem("Token"));
-  //     login(localStorage.getItem("Token"));
-  //   }
-  // }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
-    fetch("http://localhost:3001/persondetail")
-      .then((response) => response.json())
+    fetch(`https://reqres.in/api/login`, {
+      method: "post",
+      body: JSON.stringify(form),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
       .then((res) => {
-        console.log("res", res);
-        setData(res);
-      });
+        localStorage.setItem("Token", res.token); //this part store data in localstorage
+        console.log(res.token);
+        login(res.token)
+      })
+      .catch((err) => console.log(err));
   };
-  data.map((i) => {
-    
-    console.log("data1", i.id, i.username, i.address, i.number);
-  });
 
-  // localStorage.setItem("Token", res.token); //this part store data in localstorage
-  const { number, password } = form;
+  // this part is make for local storage check
+
+  useEffect(() => {
+    if (localStorage.getItem("Token") !== null) {
+      console.log(localStorage.getItem("Token"));
+      login(localStorage.getItem("Token"));
+    }
+  }, []);
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // console.log(form);
+  //   fetch("http://localhost:3001/persondetail")
+  //     .then((response) => response.json())
+  //     .then((res) => {
+  //       console.log("res", res);
+  //       setData(res);
+  //     });
+  //   };
+
+  //   const boom=(data,form)=>{
+  //     data.map((i) => {
+  //       if (form.number === i.number && form.password === i.password) {
+  //         setAuth("true");
+  //       }
+  //       console.log("data1", i.id, i.username, i.address, i.number);
+  //     });
+  //     if (auth === null) {
+  //       setAuth("false");
+  //     }
+  //   }
+  // boom(data,form);
+  // console.log("63", form.number, form.password);
+  // console.log("63",form,data);
+
+  const { email, password } = form;
 
   return (
     <>
@@ -78,11 +105,12 @@ export const Login = () => {
           <form onSubmit={handleSubmit}>
             <h1>Login</h1>
             <input
-              type="text"
-              name="number"
-              placeholder="number"
-              value={number}
+              type="email"
+              name="email"
+              placeholder="email"
+              value={email}
               onChange={handleChange}
+              required
             />
             <br />
             <br />
@@ -92,6 +120,7 @@ export const Login = () => {
               placeholder="Password"
               value={password}
               onChange={handleChange}
+              required
             />
             <br />
             <input type="submit" value="Login" />
