@@ -12,11 +12,16 @@ const Wrapper = styled.div`
 `;
 const Box = styled.div`
   //   border: 1px solid ;
-  box-shadow: -2px 10px 15px 5px #888888;
-  width: 100%;
+  // box-shadow: -2px 10px 15px 5px #888888;
+  // width: 100%;
   // height: 25vh;
-  padding:2%;
+  // padding:2%;
   //   background-color: yellow;
+  // margin-top: 2%;
+
+  box-shadow: -2px 10px 15px 5px #888888;
+  width: 95%;
+  padding: 2%;
   margin-top: 2%;
 `;
 const Section1 = styled.div`

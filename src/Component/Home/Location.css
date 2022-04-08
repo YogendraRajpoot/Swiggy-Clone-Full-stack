@@ -312,16 +312,19 @@
   /* padding-left: 3vh; */
   align-items: center;
   /* align-content: space-around; */
-  /* justify-content: space-between;
+  /* justify-content: space-between;*/
+  border: 2px solid black;
+  text-align: center;
 }
 .cart21{
-  text-align: left;
-  margin-top: 50px;
-  font-size: 30px;
+  /* text-align: left; */
+  font-size: x-large;
+  font-weight: 600;
 
 }
 .cart3{
   font-size: 15px;
+  text-align: center;
 }
 .cart22{
   margin: 0 -10px;
@@ -330,7 +333,6 @@
   /* overflow-y: hidden; */
   flex-direction: column;
   width: 100%;
-  border: 2px solid black;
 }
 /* .cart1{
   border: 1px solid black;
@@ -403,6 +405,7 @@
   text-align: left;
   margin: 10px;
   font-size: 20px;
+  text-align: center;
 }
 .total_1 {
   margin-top: 0px;

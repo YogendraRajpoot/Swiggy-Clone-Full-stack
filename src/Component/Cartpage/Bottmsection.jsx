@@ -16,7 +16,7 @@ export const Bottmsection = () => {
   return (
     <Wrapper>
       <Loginsection />
-      {/* <Cartsection /> */}
+      <Cartsection />
     </Wrapper>
   );
 };
