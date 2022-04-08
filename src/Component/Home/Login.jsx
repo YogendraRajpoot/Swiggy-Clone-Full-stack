@@ -8,13 +8,14 @@ const StyledLink = styled(Link)`
 `;
 const Wrapper = styled.div`
   align-item: center;
-  width: 60%;
+  width: 20%;
   margin-left: auto;
   margin-right: auto;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: -2px 10px 15px 5px #888888;
 `;
 const Header = styled.div`
   // align-item: center;
@@ -26,7 +27,30 @@ const Header = styled.div`
 const Card = styled.div`
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid red;
+  .Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // height: 30vh;
+    // width: 40vh;
+  }
+`;
+
+// const StyledForm = styled.form`
+//   display: flex;
+//   flex-direction: column;
+//   border: 5px solid #888888;
+//   align-items: center;
+//   box-shadow: -2px 10px 15px 5px #888888;
+// `;
+const StyledInput = styled.input`
+  height: 8vh;
+  width: 40ch;
+  // margin-top: -20px;
+`;
+const StyledInput2 = styled.input`
+  height: 5vh;
+  width: 19vh;
 `;
 
 export const Login = () => {
@@ -52,7 +76,7 @@ export const Login = () => {
       .then((res) => {
         localStorage.setItem("Token", res.token); //this part store data in localstorage
         console.log(res.token);
-        login(res.token)
+        login(res.token);
       })
       .catch((err) => console.log(err));
   };
@@ -102,9 +126,9 @@ export const Login = () => {
         or
         <StyledLink to="/signup">Create Your Account</StyledLink>
         <Card>
-          <form onSubmit={handleSubmit}>
-            <h1>Login</h1>
-            <input
+          <form className="Form" onSubmit={handleSubmit}>
+            {/* <h1>Login</h1> */}
+            <StyledInput
               type="email"
               name="email"
               placeholder="email"
@@ -113,8 +137,7 @@ export const Login = () => {
               required
             />
             <br />
-            <br />
-            <input
+            <StyledInput
               type="text"
               name="password"
               placeholder="Password"
@@ -123,7 +146,7 @@ export const Login = () => {
               required
             />
             <br />
-            <input type="submit" value="Login" />
+            <StyledInput2 type="submit" value="Login" />
           </form>
         </Card>
       </Wrapper>

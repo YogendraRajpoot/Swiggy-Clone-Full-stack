@@ -14,7 +14,8 @@ const Box = styled.div`
   //   border: 1px solid ;
   box-shadow: -2px 10px 15px 5px #888888;
   width: 100%;
-  height: 25vh;
+  // height: 25vh;
+  padding:2%;
   //   background-color: yellow;
   margin-top: 2%;
 `;

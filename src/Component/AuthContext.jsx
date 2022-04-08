@@ -7,6 +7,7 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
+  const [sortM,setSortM] = useState("");
   const dispatch = useDispatch();
   const [token, setToken] = useState("");
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ login, logout, isAuth, token }}>
+    <AuthContext.Provider value={{ login, logout, isAuth, token,sortM,setSortM }}>
       {children}
     </AuthContext.Provider>
   );

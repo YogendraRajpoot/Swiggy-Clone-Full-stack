@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import { decCount, incCount } from "../../Redux/Action/action";
 import "./Location.css";
 import { Navigationbar } from "./Navigationbar";
 
 export const Restaurantdetail = () => {
+  const dispatch = useDispatch();
   const { username } = useParams();
   const [user, setUser] = useState([]);
   const [userdetail, setUserdetail] = useState([]);
+  const count = useSelector((state) => state.count);
 
   console.log(username);
 
@@ -171,9 +175,19 @@ export const Restaurantdetail = () => {
                               <img className="idlistyle1" src={i.img_url} />
                             </div>
                             <div className="addbutton">
-                              <button className="btnadd">-</button>
+                              <button
+                                className="btnadd"
+                                onClick={() => dispatch(decCount(1))}
+                              >
+                                -
+                              </button>
                               <button className="btnadd">Add</button>
-                              <button className="btnadd">+</button>
+                              <button
+                                className="btnadd"
+                                onClick={() => dispatch(incCount(1))}
+                              >
+                                +
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -184,7 +198,51 @@ export const Restaurantdetail = () => {
               })}
             </div>
           </section>
-          <section className="section3">chandu3</section>
+          <section className="section3">
+            <div className="cart1">
+              <div className="cart21">
+                Cart
+                <div className="cart3">1 item</div>
+              </div>
+              <div className="cart22">
+                {/* <div className="sub"></div> */}
+                <div className="subcart1">
+                  <div className="subcart2">
+                    {/* <div className="subcart31"></div> */}
+                    <div className="subcart32">
+                      {/* <div className="subcart4"></div> */}
+                      <div>
+                        <div className="welcome">WELCOME50 Eligible items</div>
+                        {/* <div className="saved">
+                          You just
+                          <span className="saves">saved ₹100</span>
+                          on these items!
+                        </div> */}
+                        {/* <p>{count}</p> */}
+                        <div className="btn">
+                          <button onClick={() => dispatch(decCount(1))}>
+                            -
+                          </button>
+                          <div>{count}</div>
+                          <button onClick={() => dispatch(incCount(1))}>
+                            +
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="subcart33">
+                      <p className="total">Subtotal</p>
+                      <p className="total_1">Extra charges may apply</p>
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="subtotal"></div> */}
+              </div>
+              <Link to="/cartpage" className="cart23">
+                CHECKOUT
+              </Link>
+            </div>
+          </section>
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthContext";
 
 const Wraper2 = styled.div`
   //   border: 2px solid black;
@@ -13,8 +14,8 @@ const Wraper2 = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
 const Card = styled(Link)`
-text-decoration:none;
-color:black;
+  text-decoration: none;
+  color: black;
   //   border: 2px solid black;
   height: 40vh;
   margin-top: 10%;
@@ -149,6 +150,27 @@ const Div5 = styled.div`
 
 export const Restaurant = () => {
   const [data, setData] = useState([]);
+  // const { sortM } = useContext(AuthContext);
+
+  // const sortJsonD = (e) => {
+  //   console.log("A", e);
+  //   fetch(`http://localhost:3001/restaurant?_sort=${A}&_order=${B}`)
+  //     .then((r) => r.json())
+  //     .then((r) => {
+  //       setData(r);
+  //       console.log(r);
+  //     });
+  // };
+
+  // const filterByCategory = (e) => {
+  //   fetch(`http://localhost:3001/restaurant`)
+  //     .then((r) => r.json())
+  //     .then((r) => {
+  //       setData(r);
+  //       console.log(r);
+  //     });
+  // };
+
   useEffect(() => {
     fetch("http://localhost:3001/restaurant")
       .then((response) => response.json())

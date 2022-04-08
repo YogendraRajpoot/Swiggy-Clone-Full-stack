@@ -8,7 +8,8 @@ const StyledLink = styled(Link)`
 `;
 const Wrapper = styled.div`
   align-item: center;
-  width: 60%;
+  width: 30%;
+  box-shadow: -2px 10px 15px 5px #888888;
   margin-left: auto;
   margin-right: auto;
   border: 2px solid black;
@@ -26,7 +27,21 @@ const Header = styled.div`
 const Card = styled.div`
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid red;
+  // border: 2px solid red;
+`;
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const StyledInput = styled.input`
+  height: 8vh;
+  width: 40ch;
+`;
+const StyledInput2 = styled.input`
+  height: 5vh;
+  width: 19vh;
 `;
 
 export const Signup = () => {
@@ -36,7 +51,7 @@ export const Signup = () => {
     username: "",
     address: "",
     number: "",
-    password:"",
+    password: "",
   });
 
   //   useEffect(() => {
@@ -56,7 +71,7 @@ export const Signup = () => {
     const { id, value } = e.target;
     setformData({ ...formData, [id]: value });
   };
-  const { username, address, number,password } = formData;
+  const { username, address, number, password } = formData;
 
   const handlesubmit = (e) => {
     e.preventDefault();
@@ -77,9 +92,8 @@ export const Signup = () => {
         or
         <StyledLink to="/login">Login To Your Account</StyledLink>
         <Card>
-          <form onSubmit={handlesubmit}>
-            Name:-
-            <input
+          <StyledForm onSubmit={handlesubmit}>
+            <StyledInput
               id="username"
               type="text"
               placeholder="Enter Name"
@@ -88,8 +102,7 @@ export const Signup = () => {
               required
             />
             <br />
-            Address:-
-            <input
+            <StyledInput
               id="address"
               type="text"
               placeholder="Enter Address"
@@ -98,8 +111,7 @@ export const Signup = () => {
               required
             />
             <br />
-            Mobile Number:-
-            <input
+            <StyledInput
               id="number"
               type="number"
               placeholder="Mobile Number"
@@ -108,8 +120,7 @@ export const Signup = () => {
               required
             />
             <br />
-            Password:-
-            <input
+            <StyledInput
               id="password"
               type="password"
               placeholder="Enter password"
@@ -118,10 +129,10 @@ export const Signup = () => {
               required
             />
             <br />
-            <input type="submit" value="submit" />
+            <StyledInput2 type="submit" value="submit" />
             <br />
             <br />
-          </form>
+          </StyledForm>
         </Card>
       </Wrapper>
     </>

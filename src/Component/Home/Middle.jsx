@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { AuthContext } from "../AuthContext";
 import { Restaurant } from "./Restaurant";
 
 const Container = styled.div``;
@@ -54,6 +55,12 @@ const Box = styled.div`
 `;
 
 export const Middle = () => {
+  // const { setSortM } = useContext(AuthContext);
+  // const sortJsonA = (e) => {
+  //   setSortM(e);
+  // };
+  const sortJsonA=[]
+
   return (
     <>
       <Wraper1>
@@ -63,12 +70,24 @@ export const Middle = () => {
           </Box>
         </div>
         <div className="right-div">
-          <Box className="Link2">Relevance</Box>
-          <Box className="Link2">Delivery Time</Box>
-          <Box className="Link2">Rating</Box>
-          <Box className="Link2">Cost: Low To High</Box>
-          <Box className="Link2">Cost: High To Low</Box>
-          <Box className="Link2">Filters</Box>
+          <Box className="Link2" onClick={()=>sortJsonA()}>
+            Relevance
+          </Box>
+          <Box className="Link2" onClick={()=>sortJsonA("c")}>
+            Delivery Time
+          </Box>
+          <Box className="Link2" onClick={()=>sortJsonA("e")}>
+            Rating
+          </Box>
+          <Box className="Link2" onClick={()=>sortJsonA("e")}>
+            Cost: Low To High
+          </Box>
+          <Box className="Link2" onClick={()=>sortJsonA("e")}>
+            Cost: High To Low
+          </Box>
+          <Box className="Link2" onClick={()=>sortJsonA("e")}>
+            Filters
+          </Box>
         </div>
       </Wraper1>
       <Hr />

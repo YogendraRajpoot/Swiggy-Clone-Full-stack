@@ -1,23 +1,41 @@
-import { ADD_DETAIL, IS_AUTH } from "../Action/action";
-import { ADD_LOCATION } from "../Action/action";
+// import {
+//   ADD_LOCATION,
+//   ADD_DETAIL,
+//   IS_AUTH,
+// } from "../Action/action";
+import { DESC_COUNT, INC_COUNT,RESET } from "../Action/action";
 
 export const reducer = (store, { type, payload }) => {
   switch (type) {
-    case ADD_LOCATION:
+    case INC_COUNT:
       return {
-        ...store,
-        location: payload,
+        count: store.count + payload,
       };
-    case IS_AUTH:
+    case DESC_COUNT:
       return {
-        ...store,
-        isauth: payload,
+        count: store.count - payload,
       };
-    case ADD_DETAIL:
+
+    case RESET:
       return {
-        ...store,
-        detail: [payload],
+        count: 0,
       };
+
+    // case ADD_LOCATION:
+    //   return {
+    //     ...store,
+    //     location: payload,
+    //   };
+    // case IS_AUTH:
+    //   return {
+    //     ...store,
+    //     isauth: payload,
+    //   };
+    // case ADD_DETAIL:
+    //   return {
+    //     ...store,
+    //     detail: [payload],
+    // };
 
     default:
       return store;
