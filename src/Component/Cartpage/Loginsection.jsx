@@ -155,6 +155,9 @@ export const Loginsection = () => {
       </Box>
       <Box>
         <Section1>Delivery address</Section1>
+        <Section3>
+          <h3>712/923 1-B4 Civil Lines, Prayagraj ,Allahabad</h3>
+        </Section3>
       </Box>
       <Box>
         <Section1>Choose payment method</Section1>
