@@ -11,11 +11,11 @@ export const Blank = () => {
     <div>
       Blank
       <Link to="/home">Home</Link>
-      <div>
+      {/* <div>
         <h1>Count : {count}</h1>
         <button onClick={() => dispatch(incCount(2))}> INC COUNT</button>
         <button onClick={() => dispatch(decCount(2))}> DEC COUNT</button>
-      </div>
+      </div> */}
     </div>
   );
 };

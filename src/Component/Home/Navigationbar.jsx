@@ -186,7 +186,8 @@ export const Navigationbar = () => {
               Sign In
             </StyledLink>
             <StyledLink to="/cartpage">
-              <SmallBox>{count}</SmallBox>
+              {count>=0? <SmallBox>{count}</SmallBox>: <SmallBox>0</SmallBox>}
+              {/* <SmallBox>{count}</SmallBox> */}
               Cart
             </StyledLink>
           </div>

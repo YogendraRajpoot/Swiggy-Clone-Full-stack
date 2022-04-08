@@ -4,9 +4,17 @@ export const RESET = "RESET";
 export const ADD_LOCATION = "ADD_LOCATION";
 export const IS_AUTH = "IS_AUTH";
 export const ADD_DETAIL = "ADD_DETAIL";
+export const ADD_ITEM="ADD_ITEM"
+export const AMOUNT="AMOUNT"
 // action creator
 // function which create action object
 
+export const addamount = (payload) => {
+  return {
+    type: AMOUNT,
+    payload,
+  };
+};
 export const incCount = (payload) => {
   return {
     type: INC_COUNT,
@@ -39,3 +47,8 @@ export const detail = (payload) => ({
   type: ADD_DETAIL,
   payload,
 });
+export const additem = (payload) => ({
+  type: ADD_ITEM,
+  payload,
+});
+

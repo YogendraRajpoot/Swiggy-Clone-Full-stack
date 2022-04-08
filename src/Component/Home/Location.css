@@ -269,6 +269,7 @@
   font-size: large;
   padding: 1vh;
   border: none;
+  cursor: pointer;
 }
 .addbuttons {
   bottom: 8px;

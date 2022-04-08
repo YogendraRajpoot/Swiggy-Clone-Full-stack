@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { decCount, incCount } from "../../Redux/Action/action";
+import {
+  addamount,
+  additem,
+  decCount,
+  incCount,
+} from "../../Redux/Action/action";
 import "./Location.css";
 import { Navigationbar } from "./Navigationbar";
 
 export const Restaurantdetail = () => {
+  const itemss = useSelector((state) => state.itemss);
+  const amount = useSelector((state) => state.amount);
   const dispatch = useDispatch();
   const { username } = useParams();
   const [user, setUser] = useState([]);
@@ -143,7 +150,7 @@ export const Restaurantdetail = () => {
               <div className="item">{Object.keys(userdetail).length} items</div>
               {userdetail.map((i) => {
                 return (
-                  <div className="items">
+                  <div className="items" key={i.id}>
                     <div className="items1">
                       <div className="items2">
                         <div className="items3">
@@ -184,7 +191,11 @@ export const Restaurantdetail = () => {
                               <button className="btnadd">Add</button>
                               <button
                                 className="btnadd"
-                                onClick={() => dispatch(incCount(1))}
+                                onClick={() => {
+                                  dispatch(incCount(1));
+                                  dispatch(additem(i.name));
+                                  dispatch(addamount(Number(i.price)));
+                                }}
                               >
                                 +
                               </button>
@@ -198,51 +209,71 @@ export const Restaurantdetail = () => {
               })}
             </div>
           </section>
-          <section className="section3">
-            <div className="cart1">
-              <div className="cart21">
-                Cart
-                <div className="cart3">1 item</div>
-              </div>
-              <div className="cart22">
-                {/* <div className="sub"></div> */}
-                <div className="subcart1">
-                  <div className="subcart2">
-                    {/* <div className="subcart31"></div> */}
-                    <div className="subcart32">
-                      {/* <div className="subcart4"></div> */}
-                      <div>
-                        <div className="welcome">WELCOME50 Eligible items</div>
-                        {/* <div className="saved">
+          {count > 0 ? (
+            <section className="section3">
+              <div className="cart1">
+                <div className="cart21">
+                  Cart
+                  <div className="cart3">{count}</div>
+                </div>
+                <div className="cart22">
+                  {/* <div className="sub"></div> */}
+                  <div className="subcart1">
+                    <div className="subcart2">
+                      {/* <div className="subcart31"></div> */}
+                      <div className="subcart32">
+                        {/* <div className="subcart4"></div> */}
+                        <div>
+                          <div className="welcome">
+                            WELCOME50 Eligible items
+                          </div>
+                          {/* <div className="saved">
                           You just
                           <span className="saves">saved ₹100</span>
                           on these items!
                         </div> */}
-                        {/* <p>{count}</p> */}
-                        <div className="btn">
-                          <button onClick={() => dispatch(decCount(1))}>
-                            -
-                          </button>
-                          <div>{count}</div>
-                          <button onClick={() => dispatch(incCount(1))}>
-                            +
-                          </button>
+                          <p>
+                            <img
+                              src="https://st2.depositphotos.com/8511412/11363/v/450/depositphotos_113638426-stock-illustration-star-star-icon-star-icon.jpg"
+                              className="starorange"
+                            />
+                            {itemss}
+                            {/* {console.log(itemss)} */}
+                            {/* {itemss.map((i1) => (
+                            <h3 >{i1}</h3>
+                          ))} */}
+                          </p>
+                          <div className="btn">
+                            <button
+                              onClick={() => {
+                                dispatch(decCount(1));
+                              }}
+                            >
+                              -
+                            </button>
+                            <div>{count}</div>
+                            <button onClick={() => dispatch(incCount(1))}>
+                              +
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="subcart33">
-                      <p className="total">Subtotal</p>
-                      <p className="total_1">Extra charges may apply</p>
+                      <div className="subcart33">
+                        <p className="total">Subtotal : {amount}</p>
+                        <p className="total_1">Extra charges may apply</p>
+                      </div>
                     </div>
                   </div>
+                  {/* <div className="subtotal"></div> */}
                 </div>
-                {/* <div className="subtotal"></div> */}
+                <Link to="/cartpage" className="cart23">
+                  CHECKOUT
+                </Link>
               </div>
-              <Link to="/cartpage" className="cart23">
-                CHECKOUT
-              </Link>
-            </div>
-          </section>
+            </section>
+          ) : (
+            <section className="section3"></section>
+          )}
         </div>
       </div>
     </div>
