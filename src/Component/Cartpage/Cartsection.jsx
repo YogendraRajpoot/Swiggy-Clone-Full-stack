@@ -101,20 +101,21 @@ const Wrapper = styled.div`
     margin: 20px;
   }
   .hr {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 94%;
     margin-top: 2%;
   }
 `;
 
 export const Cartsection = () => {
+  const hotelname = useSelector((state) => state.hotelname);
   const amount = useSelector((state) => state.amount);
   const itemss = useSelector((state) => state.itemss);
+  console.log(hotelname);
   // return (
   //   <div>Cart</div>
   // )
-  const [count, setCount] = useState(0);
   return (
     <Wrapper>
       <div className="acc">
@@ -126,8 +127,9 @@ export const Cartsection = () => {
               className="acimg"
             />
             <div className="restname">
-              <div>Mehil</div>
-              <div>Narayanagunda</div>
+              <div>
+                <h1>{hotelname}</h1>
+              </div>
             </div>
           </div>
 
@@ -172,20 +174,29 @@ export const Cartsection = () => {
           <hr className="hr" />
           <div>
             <div className="left">Item Discount (50% for 1st order)!</div>
-            <div className="right">-₹{amount * 50/100} </div>
+            <div className="right">-₹{(amount * 50) / 100} </div>
           </div>
           <hr className="hr" />
           <div>
             <div className="left">Taxes and charges! (18%)</div>
-            <div className="right">₹{amount * 18/100}</div>
+            <div className="right">₹{(amount * 18) / 100}</div>
           </div>
           <hr className="hr" />
           <div>
             <div className="left">TO PAY</div>
-            <div className="right">₹{amount + (amount * 18/100)-(amount * 10/100)}</div>
+            <div className="right">
+              ₹{amount + (amount * 18) / 100 - (amount * 10) / 100}
+            </div>
           </div>
           <hr className="hr" />
-          <div className="bill">you have saved ₹{(amount+(amount * 18/100)+100)-(amount + (amount * 18/100)-(amount * 50/100))} on the bill</div>
+          <div className="bill">
+            you have saved ₹
+            {amount +
+              (amount * 18) / 100 +
+              100 -
+              (amount + (amount * 18) / 100 - (amount * 50) / 100)}{" "}
+            on the bill
+          </div>
         </section>
       </div>
     </Wrapper>

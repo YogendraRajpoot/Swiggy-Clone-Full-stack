@@ -5,6 +5,7 @@ export const ADD_LOCATION = "ADD_LOCATION";
 export const IS_AUTH = "IS_AUTH";
 export const ADD_DETAIL = "ADD_DETAIL";
 export const ADD_ITEM="ADD_ITEM"
+export const ADD_HOTELNAME="ADD_HOTELNAME"
 export const AMOUNT="AMOUNT"
 // action creator
 // function which create action object
@@ -49,6 +50,11 @@ export const detail = (payload) => ({
 });
 export const additem = (payload) => ({
   type: ADD_ITEM,
+  payload,
+});
+
+export const addhotelname = (payload) => ({
+  type: ADD_HOTELNAME,
   payload,
 });
 

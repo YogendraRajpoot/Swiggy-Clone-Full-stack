@@ -3,6 +3,8 @@ import styled from "styled-components";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthContext";
+import { useDispatch, useSelector } from "react-redux";
+import { addhotelname } from "../../Redux/Action/action";
 
 const Wraper2 = styled.div`
   //   border: 2px solid black;
@@ -149,26 +151,66 @@ const Div5 = styled.div`
 `;
 
 export const Restaurant = () => {
+  const hotelname = useSelector((state) => state.hotelname);
+  const dispatch = useDispatch();
   const [data, setData] = useState([]);
-  // const { sortM } = useContext(AuthContext);
+  const { sortM } = useContext(AuthContext);
+  console.log(sortM);
+  // if (sortM === "a") {
+  //   fetch(`http://localhost:3001/restaurant?_sort=average_time&_order=desc`)
+  //   .then((r) => r.json())
+  //   .then((r) => {
+  //     setData(r);
+  //     console.log(r);
+  //   });
+  // }
+  // else if (sortM === "b") {
+  //   fetch(`http://localhost:3001/restaurant?_sort=average_time&_order=asc`)
+  //   .then((r) => r.json())
+  //   .then((r) => {
+  //     setData(r);
+  //     console.log(r);
+  //   });
+  // } else if (sortM === "c") {
+  //   fetch(`http://localhost:3001/restaurant?_sort=rating&_order=desc`)
+  //   .then((r) => r.json())
+  //   .then((r) => {
+  //     setData(r);
+  //     console.log(r);
+  //   });
+  // } else if (sortM === "d") {
+  //   fetch(`http://localhost:3001/restaurant?_sort=average_cost&_order=asc`)
+  //   .then((r) => r.json())
+  //   .then((r) => {
+  //     setData(r);
+  //     console.log(r);
+  //   });
+  // } else if (sortM === "e") {
+  //   fetch(`http://localhost:3001/restaurant?_sort=average_cost&_order=desc`)
+  //   .then((r) => r.json())
+  //   .then((r) => {
+  //     setData(r);
+  //     console.log(r);
+  //   });
+  // }
 
   // const sortJsonD = (e) => {
   //   console.log("A", e);
-  //   fetch(`http://localhost:3001/restaurant?_sort=${A}&_order=${B}`)
-  //     .then((r) => r.json())
-  //     .then((r) => {
-  //       setData(r);
-  //       console.log(r);
-  //     });
+  // fetch(`http://localhost:3001/restaurant?_sort=${A}&_order=${B}`)
+  //   .then((r) => r.json())
+  //   .then((r) => {
+  //     setData(r);
+  //     console.log(r);
+  //   });
   // };
 
   // const filterByCategory = (e) => {
-  //   fetch(`http://localhost:3001/restaurant`)
-  //     .then((r) => r.json())
-  //     .then((r) => {
-  //       setData(r);
-  //       console.log(r);
-  //     });
+  // fetch(`http://localhost:3001/restaurant`)
+  //   .then((r) => r.json())
+  //   .then((r) => {
+  //     setData(r);
+  //     console.log(r);
+  //   });
   // };
 
   useEffect(() => {
@@ -183,7 +225,14 @@ export const Restaurant = () => {
     <Wraper2>
       {data.map((item) => {
         return (
-          <Card key={item.id} to={`/home/${item.id}`}>
+          <Card
+            key={item.id}
+            to={`/home/${item.id}`}
+            onClick={() => {
+              dispatch(addhotelname(item.name));
+              console.log(hotelname);
+            }}
+          >
             <SmallCard>
               <SmallerCard1>
                 <Image src={item.img_url} alt="" />

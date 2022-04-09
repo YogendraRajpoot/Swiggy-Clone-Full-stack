@@ -55,11 +55,10 @@ const Box = styled.div`
 `;
 
 export const Middle = () => {
-  // const { setSortM } = useContext(AuthContext);
-  // const sortJsonA = (e) => {
-  //   setSortM(e);
-  // };
-  const sortJsonA=[]
+  const { setSortM } = useContext(AuthContext);
+  const sortJsonA = (e) => {
+    setSortM(e);
+  };
 
   return (
     <>
@@ -70,22 +69,22 @@ export const Middle = () => {
           </Box>
         </div>
         <div className="right-div">
-          <Box className="Link2" onClick={()=>sortJsonA()}>
+          <Box className="Link2" onClick={()=>sortJsonA("a")}>
             Relevance
           </Box>
-          <Box className="Link2" onClick={()=>sortJsonA("c")}>
+          <Box className="Link2" onClick={()=>sortJsonA("b")}>
             Delivery Time
           </Box>
-          <Box className="Link2" onClick={()=>sortJsonA("e")}>
+          <Box className="Link2" onClick={()=>sortJsonA("c")}>
             Rating
           </Box>
-          <Box className="Link2" onClick={()=>sortJsonA("e")}>
+          <Box className="Link2" onClick={()=>sortJsonA("d")}>
             Cost: Low To High
           </Box>
           <Box className="Link2" onClick={()=>sortJsonA("e")}>
             Cost: High To Low
           </Box>
-          <Box className="Link2" onClick={()=>sortJsonA("e")}>
+          <Box className="Link2" onClick={()=>sortJsonA("f")}>
             Filters
           </Box>
         </div>

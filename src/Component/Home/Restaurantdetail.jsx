@@ -11,6 +11,7 @@ import "./Location.css";
 import { Navigationbar } from "./Navigationbar";
 
 export const Restaurantdetail = () => {
+  const hotelname = useSelector((state) => state.hotelname);
   const itemss = useSelector((state) => state.itemss);
   const amount = useSelector((state) => state.amount);
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ export const Restaurantdetail = () => {
 
   console.log("user", user);
   console.log("userdetail", userdetail, Object.keys(userdetail).length);
+  console.log("hotelname",hotelname);
 
   return (
     <div className="location">

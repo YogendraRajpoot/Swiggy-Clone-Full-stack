@@ -4,7 +4,8 @@ export const store = createStore(reducer, {
   count: 0,
   // itemss: [],
   itemss: "",
-  amount:0
+  amount: 0,
+  hotelname: "",
   // location: "",
   // isauth:"",
   // detail:[],
