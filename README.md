@@ -1,7 +1,7 @@
 
 # Swiggy Clone 🌇
 
-Swiggy clone - Swiggy is an Indian online food ordering and delivery platform.
+This website is the clone of Swiggy.com (Swiggy is India's largest and highest-valued online food ordering and delivery platform.
 
 ## Tech Stack Used 👩‍💻
 
