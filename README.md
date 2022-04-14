@@ -10,6 +10,7 @@ This website is the clone of Swiggy.com (Swiggy is India's largest and highest-v
 - Javascript
 - React
 - Redux
+- Material-ui
 
 
 ## Run Locally 💻
@@ -35,17 +36,20 @@ Start
 
 ## Snapshots 📷
 
-![](https://d1gzz21cah5pzn.cloudfront.net/img/websites/s/swi/swiggy.com-desktop@2x.1629464717.jpg)
-
-![](https://miro.medium.com/max/1400/1*CZ471fsymFCdTgr2DN8YKg.png)
-
-<!-- ![](https://github.com/MuskanIss/ConstructWeek_Adventure/blob/main/images/adventure3.png?raw=true) -->
+![](./src/Image/Landing-page.png)
+![](./src/Image/Landing-page-2.png)
+![](./src/Image/Home-page-1.png)
+![](./src/Image/Home-page-2.png)
+![](./src/Image/Restaurant-page.png)
+![](./src/Image/Cart-page.png)
+![](./src/Image/Login-page.png)
+![](./src/Image/Sign-up-page.png)
 ## Demo 🎥
 
 Deployed Link: [Swiggy Link](https://www.swiggy.com/restaurants)
 
 
-## Authors 🤝
+## Collaborators 🤝
 
-- [@chandu806](https://github.com/chandu806)
-- [@YogendraRajpoot](https://github.com/YogendraRajpoot)
+* Chandu ==> [Github](https://github.com/chandu806) [Linkedin](https://github.com/chandu806)
+* Yogendra Rajpoot ==> [Github](https://github.com/YogendraRajpoot) [Linkedin](https://www.linkedin.com/in/yogendrarajpoot/)
