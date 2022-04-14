@@ -23,7 +23,7 @@ export const Restaurantdetail = () => {
   console.log(username);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/restaurant/${username}`)
+    fetch(`https://fake-json-swiggy-api.herokuapp.com/restaurant/${username}`)
       .then((res) => res.json())
       .then((res) => {
         setUser(res);

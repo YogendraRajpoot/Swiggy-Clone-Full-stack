@@ -46,7 +46,7 @@ Start
 ![](./src/Image/Sign-up-page.png)
 ## Demo 🎥
 
-Deployed Link: [Swiggy Link](https://www.swiggy.com/restaurants)
+Deployed Link: [Swiggy-Clone Link](https://swigggy-clone.herokuapp.com/)
 
 
 ## Collaborators 🤝

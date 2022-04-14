@@ -214,7 +214,7 @@ export const Restaurant = () => {
   // };
 
   useEffect(() => {
-    fetch("http://localhost:3001/restaurant")
+    fetch("https://fake-json-swiggy-api.herokuapp.com/restaurant")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
