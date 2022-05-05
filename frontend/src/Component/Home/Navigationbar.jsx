@@ -1,4 +1,3 @@
-import SupportIcon from "@mui/icons-material/Support";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -7,15 +6,16 @@ import PersonOutlineSharpIcon from "@mui/icons-material/PersonOutlineSharp";
 import { AuthContext } from "../AuthContext";
 import { useDispatch, useSelector } from "react-redux";
 import { reset } from "../../Redux/Action/action";
+import LoginDrawer from './Drawer/LoginDrawer';
 
-const Container = styled.div`
+const Container = styled.div
+`
   width: 100%;
   height: 80px;
   position: sticky;
   top: 0;
   background: white;
-  z-index: 100;
-`;
+  z-index: 100;`;
 
 const Wraper = styled.div`
   // border: 2px solid black;
@@ -177,14 +177,15 @@ export const Navigationbar = () => {
               />
               Offers
             </StyledLink> */}
-            <StyledLink onClick={() => dispatch(reset())} to="/signup">
+            {/* <StyledLink onClick={() => dispatch(reset())} to="/signup">
               <PersonOutlineSharpIcon />
               Sign Up
-            </StyledLink>
-            <StyledLink onClick={() => dispatch(reset())} to="/login">
+            </StyledLink> */}
+            {/* <StyledLink onClick={() => dispatch(reset())} to="/login">
               <PersonOutlineSharpIcon />
               Sign In
-            </StyledLink>
+            </StyledLink> */}
+            <LoginDrawer />
             <StyledLink to="/cartpage">
               {count>=0? <SmallBox>{count}</SmallBox>: <SmallBox>0</SmallBox>}
               {/* <SmallBox>{count}</SmallBox> */}
