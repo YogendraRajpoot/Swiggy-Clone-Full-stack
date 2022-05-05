@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer } from "./Footer";
+import Footer from "../LandingPage/Footer/footer";
 import { Middle } from "./Middle";
 import { Navigationbar } from "./Navigationbar";
 import { Slider } from "./Slider";

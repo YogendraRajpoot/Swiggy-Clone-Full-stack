@@ -5,6 +5,7 @@ import Button from './button';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import LoginDrawer from '../Drawer/LoginDrawer';
 import RegisterDrawer from  '../Drawer/RegisterDrawer';
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
@@ -35,7 +36,7 @@ const Hero = () => {
                             <span> &nbsp;Locate Me</span>
                             </div>
                         </div>
-                        <Button classes={'find-food-btn'} name={'Find Food'} />
+                        <Link to="/home"><Button classes={'find-food-btn'} name={'Find Food'} /></Link>
                     </div>
                 </div>
                 {/* <HSEC4 /> */}
