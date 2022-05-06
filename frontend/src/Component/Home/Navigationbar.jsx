@@ -37,7 +37,7 @@ const Wraper = styled.div`
   }
   .right-div {
     // border: 2px solid black;
-    width: 77vh;
+    width: 73vh;
     // background-color: bisque;
     padding: 2%;
     display: flex;

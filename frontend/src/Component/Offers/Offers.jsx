@@ -3,6 +3,7 @@ import { Navigationbar } from "../Home/Navigationbar";
 import { Restaurant } from "../Home/Restaurant";
 import { Main } from "../Home/Slider";
 import styled from "styled-components";
+import Footer from "../LandingPage/Footer/footer";
 
 const Hr = styled.hr`
   width: 140vh;
@@ -120,6 +121,7 @@ export const Offers = () => {
         </span>
       </Wraper1>
       <Restaurant />
+      <Footer />
     </>
   );
 };
