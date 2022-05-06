@@ -7,6 +7,7 @@ import {
   decCount,
   incCount,
 } from "../../Redux/Action/action";
+import Footer from "../LandingPage/Footer/footer";
 import "./Location.css";
 import { Navigationbar } from "./Navigationbar";
 
@@ -14,32 +15,44 @@ export const Restaurantdetail = () => {
   const hotelname = useSelector((state) => state.hotelname);
   const itemss = useSelector((state) => state.itemss);
   const amount = useSelector((state) => state.amount);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
   const dispatch = useDispatch();
   const { username } = useParams();
   const [user, setUser] = useState([]);
   const [userdetail, setUserdetail] = useState([]);
   const count = useSelector((state) => state.count);
 
-  console.log(username);
+  console.log("23", username);
+
+  const url = `http://localhost:9001/restaurant/${username}`;
 
   useEffect(() => {
-    fetch(`https://fake-json-swiggy-api.herokuapp.com/restaurant/${username}`)
+    getRestaurantDetail();
+  }, []);
+
+  function getRestaurantDetail() {
+    setIsLoading(true);
+    return fetch(url)
       .then((res) => res.json())
       .then((res) => {
         setUser(res);
-        setUserdetail(res.items);
-        console.log(res);
+        setUserdetail(res[0].items);
+        console.log("31", res);
+        console.log("32", username);
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => setIsError(true))
+      .finally(() => setIsLoading(false));
+  }
+
   // let count = 0;
   // user.items.map((i) =>i?count++);
   // console.log(count);
 
-  console.log("user", user);
-  console.log("userdetail", userdetail, Object.keys(userdetail).length);
-  console.log("hotelname",hotelname);
-
+  console.log("user 39", user);
+  // console.log("userdetail 40", userdetail, Object.keys(userdetail).length);
+  console.log("userdetail 45", userdetail);
+  console.log("hotelname 41", hotelname);
   return (
     <div className="location">
       <Navigationbar />
@@ -127,6 +140,19 @@ export const Restaurantdetail = () => {
           </div>
         </div>
       </div>
+      {isLoading ? (
+      <div style={{ width: "100%" }}>
+        <img
+          src="https://cdn.dribbble.com/users/436306/screenshots/6026974/foodline.gif"
+          style={{ marginLeft: "15%", width: "70%", height: "40vw" }}
+        />
+        {/* <img
+        style={{ marginLeft:"35%" }}
+        src="	https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0"
+      />
+      <img src="https://freefrontend.com/assets/img/css-loaders/loading.gif" style={{marginLeft:"35%"}}/> */}
+      </div>
+      ) : isError ? (<div>Something went wrong</div>) : (
       <div className="banner2">
         <div className="recommended">
           <section className="section1">
@@ -135,11 +161,7 @@ export const Restaurantdetail = () => {
                 <div className="beverage">
                   <h2>All Items</h2>
                   {userdetail.map((i) => {
-                    return (
-                      <h5 className="tag">
-                        <div>{i.name}</div>
-                      </h5>
-                    );
+                    return <p>{i.name}</p>;
                   })}
                 </div>
               </div>
@@ -282,6 +304,8 @@ export const Restaurantdetail = () => {
           )}
         </div>
       </div>
+      )}
+      <Footer />
     </div>
   );
 };

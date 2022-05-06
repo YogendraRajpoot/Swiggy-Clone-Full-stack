@@ -59,29 +59,31 @@ const Section3 = styled.div`
 `;
 
 const Button1 = styled.button`
-  border: 2px solid green;
+  border: 2px solid #60b246;
   width: 15vh;
   height: 5vh;
+  color:#60b246;
   //   margin-top: 4%;
   //   margin-Left: 4%;
   //   font-size:2vh;
   //   font-weight:600;
   .Link {
     text-decoration: none;
+    color:#60b246;
   }
 `;
 const Button2 = styled.button`
-  border: 2px solid green;
+  border: 2px solid #60b246;
   width: 15vh;
   height: 5vh;
-  background-color: green;
+  background-color: #60b246;
   //   margin-top: 4%;
   margin-left: 4%;
   //   font-size:2vh;
   //   font-weight:600;
   .Link {
     text-decoration: none;
-    color: black;
+    color: white;
   }
 `;
 const Round = styled.div`
@@ -167,6 +169,7 @@ export const Loginsection = () => {
       </Box>
       <Box>
         <Section1>Choose payment method</Section1>
+        <Button2 style={{marginLeft:"5%",marginTop:"4%",width:"20%"}} > Online Payement </Button2>
       </Box>
       {/* <Box></Box> */}
     </Wrapper>

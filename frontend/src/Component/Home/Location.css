@@ -6,9 +6,11 @@
 ._3t {
   height: 270px;
   display: flex;
+  width: 67%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
   /* width: 140vh; */
-  margin-left:5%;
-  margin-right: 5%;
   /* margin-left: auto;
   margin-right: auto; */
 }
@@ -110,9 +112,9 @@
 
 .recommended {
   display: flex;
-  /* width: 140vh; */
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
   /*  */
 }
 .section1 {

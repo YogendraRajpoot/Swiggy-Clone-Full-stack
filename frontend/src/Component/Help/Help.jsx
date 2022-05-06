@@ -6,6 +6,7 @@ import { Help2 } from "./Help2";
 import { Help3 } from "./Help3";
 // import { NavBar } from "../Home/Navbar/Navbar";
 import { Navigationbar } from '../Home/Navigationbar'
+import Footer from "../LandingPage/Footer/footer";
 
 // function Help() {
 export const Help = () => {
@@ -72,6 +73,7 @@ export const Help = () => {
           {active === "Thirdcard" && <Help3 />}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

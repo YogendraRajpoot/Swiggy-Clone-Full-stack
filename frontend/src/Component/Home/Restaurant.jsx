@@ -9,11 +9,9 @@ import { addhotelname } from "../../Redux/Action/action";
 const Wraper2 = styled.div`
   //   border: 2px solid black;
   height: auto;
-  width: auto;
-  // margin-left: auto;
-  // margin-right: auto;
-  margin-left:70px;
-  margin-right:70px;
+  width: 140vh;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
@@ -21,20 +19,21 @@ const Card = styled(Link)`
   text-decoration: none;
   color: black;
   //   border: 2px solid black;
-  height: 40vh;
-  margin-top: 10%;
+  height: 45vh;
+  // margin-top: 5%;
   // box-shadow: 5px 10px 8px 10px #888888;
   .hr2 {
     opacity: 0;
   }
   &:hover {
-    // color: orange;
+    color: black;
     cursor: pointer;
     // border: 2px solid grey;
     box-shadow: -2px 10px 15px 5px #888888;
   }
   &:hover .para5 {
     opacity: 1;
+    color: #5d8ed5;
     margin-top: 3%;
     margin-left: 30%;
   }
@@ -44,7 +43,7 @@ const Card = styled(Link)`
 `;
 const SmallCard = styled.div`
   //   border: 2px solid black;
-  height: 92%;
+  height: 75%;
   width: 92%;
   margin-top: 4%;
   margin-left: auto;
@@ -88,8 +87,8 @@ const Div2 = styled.div`
   // border: 1px solid black;
   height: 20%;
   width: 100%;
-  margin:10px;
-  margin-left:0px;
+  margin: 10px;
+  margin-left: 0px;
   font-size: smaller;
   // background: green;
   p {
@@ -100,8 +99,8 @@ const Div3 = styled.div`
   // border: 1px solid black;
   height: 20%;
   width: 100%;
-  margin:10px;
-  margin-left:0px;
+  margin: 10px;
+  margin-left: 0px;
   display: flex;
   flex-direction: row;
   // background: brown;
@@ -125,7 +124,9 @@ const Div4 = styled.div`
   // padding:5% 0% 0% 0%;
   // border: 1px solid black;
   height: 20%;
+  font-weight: 500;
   width: 100%;
+  color: #8a584b;
   font-size: small;
   display: flex;
   flex-direction: row;
@@ -151,7 +152,7 @@ const Div5 = styled.div`
     opacity: 0;
     margin-top: 1%;
     margin-left: 30%;
-    color: blue;
+    // color: blue;
     font-weight: 600;
   }
 `;
@@ -159,6 +160,8 @@ const Div5 = styled.div`
 export const Restaurant = () => {
   const hotelname = useSelector((state) => state.hotelname);
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
   const [data, setData] = useState([]);
   const { sortM } = useContext(AuthContext);
   console.log(sortM);
@@ -220,20 +223,41 @@ export const Restaurant = () => {
   // };
 
   useEffect(() => {
-    fetch("https://fake-json-swiggy-api.herokuapp.com/restaurant")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-      });
+    getRestaurant();
   }, []);
-  return (
+
+  function getRestaurant() {
+    setIsLoading(true);
+    return fetch("http://localhost:9001/restaurant")
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setData(res);
+      })
+      .catch((err) => setIsError(true))
+      .finally(() => setIsLoading(false));
+  }
+  return isLoading ? (
+    <div style={{ width: "100%" }}>
+      <img
+        src="https://cdn.dribbble.com/users/436306/screenshots/6026974/foodline.gif"
+        style={{ marginLeft: "15%", width: "70%", height: "40vw" }}
+      />
+      {/* <img
+        style={{ marginLeft:"35%" }}
+        src="	https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/2xempty_cart_yfxml0"
+      />
+      <img src="https://freefrontend.com/assets/img/css-loaders/loading.gif" style={{marginLeft:"35%"}}/> */}
+    </div>
+  ) : isError ? (
+    <div>Something went wrong</div>
+  ) : (
     <Wraper2>
       {data.map((item) => {
         return (
           <Card
             key={item.id}
-            to={`/home/${item.id}`}
+            to={`/home/${item._id}`}
             onClick={() => {
               dispatch(addhotelname(item.name));
               console.log(hotelname);
@@ -245,7 +269,7 @@ export const Restaurant = () => {
               </SmallerCard1>
               <SmallerCard2>
                 <Div1>
-                  <h3 className="h3">{item.name}</h3>
+                  <h5>{item.name}</h5>
                 </Div1>
                 <Div2>
                   <p>{item.cuisines.map((C) => C)}</p>

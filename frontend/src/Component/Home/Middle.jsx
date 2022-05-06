@@ -65,7 +65,7 @@ export const Middle = () => {
       <Wraper1>
         <div className="left-div">
           <Box>
-            <h1>2009 restaurants</h1>
+            <h3>2009 restaurants</h3>
           </Box>
         </div>
         <div className="right-div">

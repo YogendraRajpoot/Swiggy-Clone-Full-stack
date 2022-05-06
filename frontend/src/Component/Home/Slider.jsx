@@ -41,12 +41,13 @@ const Box = styled.div`
 const Card = styled.div`
   // border: 2px solid black;
   height: 100%;
+  width:25%;
   margin-left: 2%;
 `;
 const Image = styled.img`
   // border: 2px solid black;
-  padding: 12% 0%;
-  height: 80%;
+  padding: 8% 0%;
+  height: 100%;
   // width: 7vh;
   &:hover {
     transform: scale(1.05);
