@@ -9,9 +9,11 @@ import { addhotelname } from "../../Redux/Action/action";
 const Wraper2 = styled.div`
   //   border: 2px solid black;
   height: auto;
-  width: 140vh;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin-left:70px;
+  margin-right:70px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
@@ -86,6 +88,8 @@ const Div2 = styled.div`
   // border: 1px solid black;
   height: 20%;
   width: 100%;
+  margin:10px;
+  margin-left:0px;
   font-size: smaller;
   // background: green;
   p {
@@ -96,6 +100,8 @@ const Div3 = styled.div`
   // border: 1px solid black;
   height: 20%;
   width: 100%;
+  margin:10px;
+  margin-left:0px;
   display: flex;
   flex-direction: row;
   // background: brown;
