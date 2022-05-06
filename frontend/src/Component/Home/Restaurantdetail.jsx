@@ -178,6 +178,10 @@ export const Restaurantdetail = () => {
                                 <span>₹{i.price}</span>
                               </span>
                             </div>
+                            <div className="serves">
+                              |serves 1 | |Serves with Chutney,Sambar |
+                              {/* /serves 1 / / serves with {i.name} */}
+                            </div>
                           </div>
                           <div className="items41">
                             <div className="idlistyle">
