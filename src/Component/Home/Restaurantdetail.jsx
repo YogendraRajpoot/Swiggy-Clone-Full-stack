@@ -37,7 +37,7 @@ export const Restaurantdetail = () => {
       .then((res) => res.json())
       .then((res) => {
         setUser(res);
-        setUserdetail(res[0].items);
+        setUserdetail(res.items);
         console.log("31", res);
         console.log("32", username);
       })

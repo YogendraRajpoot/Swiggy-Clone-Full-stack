@@ -111,14 +111,14 @@ export const Offers = () => {
       <Wraper1>
         <span className="left-div">
           <Box>
-            <h1>Restaurant Offers</h1>
+            <h3>Restaurant Offers</h3>
           </Box>
         </span>
-        <span className="left-div">
+        {/* <span className="left-div">
           <Box>
             <h1>Payment offers/Coupons</h1>
           </Box>
-        </span>
+        </span> */}
       </Wraper1>
       <Restaurant />
       <Footer />

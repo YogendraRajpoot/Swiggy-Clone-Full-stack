@@ -177,9 +177,9 @@ export const Navigationbar = () => {
               />
               Offers
             </StyledLink> */}
-            <StyledLink onClick={() => dispatch(reset())} to="/help">
+            <StyledLink onClick={() => dispatch(reset())} to="/offers">
               <PersonOutlineSharpIcon />
-              Help
+              Offer
             </StyledLink>
             {/* <StyledLink onClick={() => dispatch(reset())} to="/login">
               <PersonOutlineSharpIcon />

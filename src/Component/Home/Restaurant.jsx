@@ -257,7 +257,7 @@ export const Restaurant = () => {
         return (
           <Card
             key={item.id}
-            to={`/home/${item._id}`}
+            to={`/home/${item.id}`}
             onClick={() => {
               dispatch(addhotelname(item.name));
               console.log(hotelname);
