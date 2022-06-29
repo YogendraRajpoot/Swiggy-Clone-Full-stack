@@ -25,7 +25,7 @@ export const Restaurantdetail = () => {
 
   console.log("23", username);
 
-  const url = `http://localhost:9001/restaurant/${username}`;
+  const url = `https://fake-json-swiggy-api.herokuapp.com/restaurant/${username}`;
 
   useEffect(() => {
     getRestaurantDetail();
