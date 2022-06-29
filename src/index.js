@@ -10,12 +10,6 @@ import { Provider } from "react-redux";
 // import { store } from "./Redux/Store/store";
 import { store } from "./Redux/Store/store";
 
-{
-  /* <Provider store={store}> */
-}
-{
-  /* </Provider> */
-}
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
