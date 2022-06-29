@@ -228,7 +228,7 @@ export const Restaurant = () => {
 
   function getRestaurant() {
     setIsLoading(true);
-    return fetch("http://localhost:9001/restaurant")
+    return fetch("https://fake-json-swiggy-api.herokuapp.com/restaurant")
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
