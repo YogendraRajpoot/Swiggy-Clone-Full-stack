@@ -167,8 +167,7 @@ export const Navigationbar = () => {
           </div>
           <div className="right-div">
             <StyledLink onClick={() => dispatch(reset())} to="/offers">
-              <SearchIcon />
-              Offers
+                Offers
             </StyledLink>
             {/* <StyledLink onClick={() => dispatch(reset())} to="/offers">
               <Image
