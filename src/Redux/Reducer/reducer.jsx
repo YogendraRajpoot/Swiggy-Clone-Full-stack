@@ -3,7 +3,15 @@
 //   ADD_DETAIL,
 //   IS_AUTH,
 // } from "../Action/action";
-import { DESC_COUNT, INC_COUNT,RESET ,ADD_ITEM, AMOUNT, ADD_HOTELNAME} from "../Action/action";
+import {
+  DESC_COUNT,
+  INC_COUNT,
+  RESET,
+  ADD_ITEM,
+  ADDAMOUNT,
+  SUBAMOUNT,
+  ADD_HOTELNAME,
+} from "../Action/action";
 
 export const reducer = (store, { type, payload }) => {
   switch (type) {
@@ -17,10 +25,15 @@ export const reducer = (store, { type, payload }) => {
         ...store,
         count: store.count - payload,
       };
-      case AMOUNT:
+    case ADDAMOUNT:
       return {
         ...store,
         amount: store.amount + payload,
+      };
+    case SUBAMOUNT:
+      return {
+        ...store,
+        amount: store.amount - payload,
       };
 
     case RESET:
@@ -28,18 +41,18 @@ export const reducer = (store, { type, payload }) => {
         ...store,
         count: 0,
       };
-      case ADD_ITEM:
-        return{
-          ...store,
-          // itemss:[...store.itemss ,payload]
-          itemss:payload,
-        }
-        case ADD_HOTELNAME :
-        return{
-          ...store,
-          // itemss:[...store.itemss ,payload]
-          hotelname:payload,
-        }
+    case ADD_ITEM:
+      return {
+        ...store,
+        // itemss:[...store.itemss ,payload]
+        itemss: payload,
+      };
+    case ADD_HOTELNAME:
+      return {
+        ...store,
+        // itemss:[...store.itemss ,payload]
+        hotelname: payload,
+      };
 
     // case ADD_LOCATION:
     //   return {

@@ -6,16 +6,25 @@ export const IS_AUTH = "IS_AUTH";
 export const ADD_DETAIL = "ADD_DETAIL";
 export const ADD_ITEM="ADD_ITEM"
 export const ADD_HOTELNAME="ADD_HOTELNAME"
-export const AMOUNT="AMOUNT"
+export const ADDAMOUNT="ADDAMOUNT"
+export const SUBAMOUNT="SUBAMOUNT"
 // action creator
 // function which create action object
 
 export const addamount = (payload) => {
   return {
-    type: AMOUNT,
+    type: ADDAMOUNT,
     payload,
   };
 };
+
+export const subamount = (payload) => {
+  return {
+    type: SUBAMOUNT,
+    payload,
+  };
+};
+
 export const incCount = (payload) => {
   return {
     type: INC_COUNT,
