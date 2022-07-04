@@ -132,13 +132,13 @@ export default function LoginDrawer() {
 
     return (
         <>
-            {/* <button
+            <button
                 type='button'
                 className='login-link'
                 onClick={toggleDrawer('right', true)}
             >
                 {'Login'}
-            </button> */}
+            </button>
             <StyledLink type="button" onClick={toggleDrawer('right', true)}>
                 <PersonOutlineSharpIcon />
                 {'Login'}
@@ -174,8 +174,8 @@ function OtpDrawer({ phoneNumber, setState, state }) {
     };
 
     const handleVerify = () => {
-        // console.log(phoneNumber, otp);
-        // console.log(setState, state);
+        console.log(phoneNumber, otp);
+        console.log(setState, state);
 
         fetch
             .post(
