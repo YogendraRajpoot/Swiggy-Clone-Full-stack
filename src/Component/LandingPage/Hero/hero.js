@@ -11,7 +11,6 @@ const Hero = () => {
     return (
         <div className="herosection">
             <div className="hero-subsec">
-                {/* <HSEC1 /> */}
                 <div className="hsec1">
                     <img className="logo" src={Logo} alt="swiggylogo" />
                     <div className="button-sect">
@@ -21,25 +20,22 @@ const Hero = () => {
                         <RegisterDrawer />
                     </div>
                 </div>
-                {/* <HSEC2 /> */}
                 <div className="hsec2">
                     <h1 className="heading-hsec2"><span className="animation-heading"></span></h1>
                     <p className="dull-text">Order food from favourite restaurants near you.</p>
                 </div>
-                {/* <HSEC3 /> */}
                 <div className="hsec3">
                     <div className="input-container">
                         <div className="inputPlocate">
                             <input className="input-box" type="text" placeholder="Enter your delivery location" />
-                            <div className="locate-btn">
+                            {/* <div className="locate-btn">
                             <FontAwesomeIcon icon="crosshairs"/>
                             <span> &nbsp;Locate Me</span>
-                            </div>
+                            </div> */}
                         </div>
                         <Link to="/home"><Button classes={'find-food-btn'} name={'Find Food'} /></Link>
                     </div>
                 </div>
-                {/* <HSEC4 /> */}
                 <div className="hsec4">
                     <h3 className="hsec4-h3">POPULAR CITIES IN INDIA</h3>
                     <ul className="list-para">
