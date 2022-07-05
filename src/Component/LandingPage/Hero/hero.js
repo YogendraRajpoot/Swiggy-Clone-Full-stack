@@ -70,7 +70,7 @@ const Hero = () => {
               <Button classes={"find-food-btn"} name={"Find Food"} />
             </Link>
           </div>
-          {city && (
+          {search && (
             <div className="input-city-suggestion">
               {city.map((item) => {
                 // console.log("74", item);
