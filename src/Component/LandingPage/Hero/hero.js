@@ -70,17 +70,19 @@ const Hero = () => {
               <Button classes={"find-food-btn"} name={"Find Food"} />
             </Link>
           </div>
-          <div className="input-city-suggestion">
-            {city.map((item) => {
-              // console.log("74", item);
-              return (
-                <p>
-                  <LocationOnIcon />
-                  {item}
-                </p>
-              );
-            })}
-          </div>
+          {search && (
+            <div className="input-city-suggestion">
+              {city.map((item) => {
+                // console.log("74", item);
+                return (
+                  <p>
+                    <LocationOnIcon />
+                    {item}
+                  </p>
+                );
+              })}
+            </div>
+          )}
         </div>
         <div className="hsec4">
           <h3 className="hsec4-h3">POPULAR CITIES IN INDIA</h3>
