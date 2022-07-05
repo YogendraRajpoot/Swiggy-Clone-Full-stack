@@ -62,14 +62,14 @@ const Button1 = styled.button`
   border: 2px solid #60b246;
   width: 15vh;
   height: 5vh;
-  color:#60b246;
+  color: #60b246;
   //   margin-top: 4%;
   //   margin-Left: 4%;
   //   font-size:2vh;
   //   font-weight:600;
   .Link {
     text-decoration: none;
-    color:#60b246;
+    color: #60b246;
   }
 `;
 const Button2 = styled.button`
@@ -113,7 +113,8 @@ export const Loginsection = () => {
   // }, []);
   useEffect(() => {
     if (localStorage.getItem("Token") !== null) {
-      console.log(localStorage.getItem("Token"));
+      localStorage.getItem("Token");
+      // console.log(localStorage.getItem("Token"));
       login(localStorage.getItem("Token"));
     }
   }, []);
@@ -169,7 +170,10 @@ export const Loginsection = () => {
       </Box>
       <Box>
         <Section1>Choose payment method</Section1>
-        <Button2 style={{marginLeft:"5%",marginTop:"4%",width:"20%"}} > Online Payement </Button2>
+        <Button2 style={{ marginLeft: "5%", marginTop: "4%", width: "20%" }}>
+          {" "}
+          Online Payement{" "}
+        </Button2>
       </Box>
       {/* <Box></Box> */}
     </Wrapper>

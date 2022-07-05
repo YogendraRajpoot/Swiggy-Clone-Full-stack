@@ -24,7 +24,7 @@ export const Restaurantdetail = () => {
   const [userdetail, setUserdetail] = useState([]);
   const count = useSelector((state) => state.count);
 
-  console.log("23", username);
+  // console.log("23", username);
 
   const url = `https://fake-json-swiggy-api.herokuapp.com/restaurant/${username}`;
 
@@ -39,8 +39,8 @@ export const Restaurantdetail = () => {
       .then((res) => {
         setUser(res);
         setUserdetail(res.items);
-        console.log("31", res);
-        console.log("32", username);
+        // console.log("31", res);
+        // console.log("32", username);
       })
       .catch((err) => setIsError(true))
       .finally(() => setIsLoading(false));
@@ -50,10 +50,10 @@ export const Restaurantdetail = () => {
   // user.items.map((i) =>i?count++);
   // console.log(count);
 
-  console.log("user 39", user);
+  // console.log("user 39", user);
   // console.log("userdetail 40", userdetail, Object.keys(userdetail).length);
-  console.log("userdetail 45", userdetail);
-  console.log("hotelname 41", hotelname);
+  // console.log("userdetail 45", userdetail);
+  // console.log("hotelname 41", hotelname);
   return (
     <div className="location">
       <Navigationbar />

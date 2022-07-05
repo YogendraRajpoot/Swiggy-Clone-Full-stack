@@ -72,7 +72,7 @@ const Hero = () => {
           </div>
           <div className="input-city-suggestion">
             {city.map((item) => {
-              console.log("74", item);
+              // console.log("74", item);
               return (
                 <p>
                   <LocationOnIcon />

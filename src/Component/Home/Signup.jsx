@@ -80,7 +80,9 @@ export const Signup = () => {
       method: "Post",
       body: JSON.stringify(formData),
       headers: { "content-type": "application/json" },
-    }).then((res) => console.log(res));
+    }).then((res) =>{
+      //  console.log(res)
+      });
     navigate("/login");
   };
 

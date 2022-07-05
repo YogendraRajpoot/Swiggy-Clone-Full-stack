@@ -14,7 +14,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = (token) => {
     if (token !== undefined) {
-      console.log("token", token);
+      // console.log("token", token);
       setIsAuth(true);
       setToken(token);
       dispatch(isauth(true));
