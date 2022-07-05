@@ -13,6 +13,7 @@ const Hero = () => {
   //   console.log(cities);
   const [search, setSearch] = useState("");
   const [city, setCity] = useState([]);
+  const [InputCity,setInputCity]=useState("")
   useEffect(() => {
     if (search === "") {
     } else {
@@ -58,6 +59,8 @@ const Hero = () => {
               <input
                 className="input-box"
                 type="text"
+                name="input_city"
+                // value={InputCity}
                 placeholder="Enter your delivery location"
                 onChange={(e) => setSearch(e.target.value)}
               />
@@ -70,12 +73,12 @@ const Hero = () => {
               <Button classes={"find-food-btn"} name={"Find Food"} />
             </Link>
           </div>
-          {search && (
+          {search && city && (
             <div className="input-city-suggestion">
               {city.map((item) => {
                 // console.log("74", item);
                 return (
-                  <p>
+                  <p onClick={()=>setInputCity(item)}>
                     <LocationOnIcon />
                     {item}
                   </p>
