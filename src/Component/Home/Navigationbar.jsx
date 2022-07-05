@@ -6,16 +6,17 @@ import PersonOutlineSharpIcon from "@mui/icons-material/PersonOutlineSharp";
 import { AuthContext } from "../AuthContext";
 import { useDispatch, useSelector } from "react-redux";
 import { reset } from "../../Redux/Action/action";
-import LoginDrawer from './Drawer/LoginDrawer';
+import LoginDrawer from "./Drawer/LoginDrawer";
+import RegisterDrawer from "./Drawer/RegisterDrawer";
 
-const Container = styled.div
-`
+const Container = styled.div`
   width: 100%;
   height: 80px;
   position: sticky;
   top: 0;
   background: white;
-  z-index: 100;`;
+  z-index: 100;
+`;
 
 const Wraper = styled.div`
   // border: 2px solid black;
@@ -41,6 +42,8 @@ const Wraper = styled.div`
     // background-color: bisque;
     padding: 2%;
     display: flex;
+    // align-items: center;
+    align-items: stretch;
     flex-direction: row;
     justify-content: space-evenly;
   }
@@ -82,7 +85,7 @@ const StyledLink = styled(Link)`
   display: flex;
 
   flex-direction: row;
-  margin-left: 10%;
+  // margin-left: 10%;
   color: grey;
   &:hover {
     color: orange;
@@ -167,7 +170,7 @@ export const Navigationbar = () => {
           </div>
           <div className="right-div">
             <StyledLink onClick={() => dispatch(reset())} to="/offers">
-                Offers
+              Offers
             </StyledLink>
             {/* <StyledLink onClick={() => dispatch(reset())} to="/offers">
               <Image
@@ -185,8 +188,13 @@ export const Navigationbar = () => {
               Sign In
             </StyledLink> */}
             <LoginDrawer />
+            <RegisterDrawer/>
             <StyledLink to="/cartpage">
-              {count>=0? <SmallBox>{count}</SmallBox>: <SmallBox>0</SmallBox>}
+              {count >= 0 ? (
+                <SmallBox>{count}</SmallBox>
+              ) : (
+                <SmallBox>0</SmallBox>
+              )}
               {/* <SmallBox>{count}</SmallBox> */}
               Cart
             </StyledLink>
@@ -247,7 +255,7 @@ export const Navigationbar = () => {
             <PersonOutlineSharpIcon />
             Yogendra
           </StyledLink>
-          <StyledLink  to="/cartpage">
+          <StyledLink to="/cartpage">
             <SmallBox>{count}</SmallBox>
             Cart
           </StyledLink>
