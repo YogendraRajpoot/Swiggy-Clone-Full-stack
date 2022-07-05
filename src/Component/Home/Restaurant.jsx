@@ -164,7 +164,7 @@ export const Restaurant = () => {
   const [isError, setIsError] = useState(false);
   const [data, setData] = useState([]);
   const { sortM } = useContext(AuthContext);
-  console.log(sortM);
+  // console.log(sortM);
   // if (sortM === "a") {
   //   fetch(`http://localhost:3001/restaurant?_sort=average_time&_order=desc`)
   //   .then((r) => r.json())
@@ -231,7 +231,7 @@ export const Restaurant = () => {
     return fetch("https://fake-json-swiggy-api.herokuapp.com/restaurant")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setData(res);
       })
       .catch((err) => setIsError(true))
@@ -260,7 +260,7 @@ export const Restaurant = () => {
             to={`/home/${item.id}`}
             onClick={() => {
               dispatch(addhotelname(item.name));
-              console.log(hotelname);
+              // console.log(hotelname);
             }}
           >
             <SmallCard>

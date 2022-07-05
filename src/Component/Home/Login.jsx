@@ -66,7 +66,7 @@ export const Login = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
+    // console.log(form);
     fetch(`https://reqres.in/api/login`, {
       method: "post",
       body: JSON.stringify(form),
@@ -75,7 +75,7 @@ export const Login = () => {
       .then((res) => res.json())
       .then((res) => {
         localStorage.setItem("Token", res.token); //this part store data in localstorage
-        console.log(res.token);
+        // console.log(res.token);
         login(res.token);
       })
       .catch((err) => console.log(err));
@@ -85,7 +85,8 @@ export const Login = () => {
 
   useEffect(() => {
     if (localStorage.getItem("Token") !== null) {
-      console.log(localStorage.getItem("Token"));
+      localStorage.getItem("Token");
+      // console.log(localStorage.getItem("Token"));
       login(localStorage.getItem("Token"));
     }
   }, []);

@@ -112,7 +112,7 @@ export const Cartsection = () => {
   const hotelname = useSelector((state) => state.hotelname);
   const amount = useSelector((state) => state.amount);
   const itemss = useSelector((state) => state.itemss);
-  console.log(hotelname);
+  // console.log(hotelname);
   // return (
   //   <div>Cart</div>
   // )
