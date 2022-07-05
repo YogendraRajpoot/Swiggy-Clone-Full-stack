@@ -265,7 +265,7 @@ function OtpDrawer({ phoneNumber, name, email, password, setState, state }) {
                 navigate('/Restaurants');
             })
             .catch((err) => {
-                console.log(err.response.data);
+                // console.log(err.response.data);
                 alert(err.response.data);
             });
     };
@@ -284,7 +284,7 @@ function OtpDrawer({ phoneNumber, name, email, password, setState, state }) {
                 setState2({ ...state2, right: true });
             })
             .catch((err) => {
-                console.log(err.response.data);
+                // console.log(err.response.data);
                 alert(err.response.data);
             });
     };
